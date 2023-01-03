@@ -1,54 +1,31 @@
-body {
-    background-color: rgb(96, 97, 131);
-}
-.shit {
-    background-color: red;
-    width: 15px;
-    height: 15px;
-    transition: ease-in-out 100ms;
-    font-size: 0;
-    color: white;
-    position: fixed;
-    left: 25px;
-    top: 25px;
+/* https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered */
+
+.dot-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+    gap: 10px;
 }
-
-a {
-    text-decoration: none;
-    color: white;
+.dot {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    transition: ease-in-out 100ms;
 }
-
-.shit:hover{
-    width: 100px;
-    height: 100px;
-    font-size: 16px;
-}
-
-.sand {
+.dot:hover {
     width: 50px;
     height: 50px;
-    background-color: aqua;
-    transition: ease-in-out;
+}
+.dot:hover ~ .dot{
+    width: 40px;
+    height: 40px;
 }
 
-.a {
-    position: relative;
-    left:5000px ; 
+.dot:hover ~  .dot ~ .dot {
+    width: 30px;
+    height: 30px;
 }
 
-.b {
-    position: relative;
-    top: 10000px;
-    left: 50000px;
-}
-
-.c {
-    position:relative ;
-    top: 100px;
-    left: 100px;
+.dot:hover ~  .dot ~ .dot ~ .dot{
+    width: 25px;
+    height: 25px;
 }
